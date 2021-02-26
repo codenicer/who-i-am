@@ -1,0 +1,18 @@
+export const techList = [
+  'JavaScript (ES6+)',
+  'TypeScript',
+  'Node. js',
+  'Express',
+  'Docker',
+  'NGINX',
+  'Next js',
+  'REACT ',
+  'Jest js',
+  'GraphQL',
+  'PHP',
+  'Laravel 7',
+  'MongoDB',
+  'SQL`s (Postgres, Mysql)',
+  'Data mining (Puppeteer , NightmareJS)',
+  'HTML & (S)CSS',
+]

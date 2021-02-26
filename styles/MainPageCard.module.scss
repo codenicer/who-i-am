@@ -1,0 +1,73 @@
+@import '_variables.scss';
+
+.main_card {
+  visibility: hidden;
+  width: 90%;
+  max-width: 90rem;
+  align-self: center;
+  justify-self: center;
+
+  p,
+  h1,
+  h2 {
+    @extend %reset-padding-margin;
+  }
+
+  .main_card__sub_header,
+  .main_card__subject {
+    color: $color-white-sub;
+  }
+
+  .main_card__sub_title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    color: $color-less-white;
+  }
+
+  .main_card__header {
+    color: $color-white;
+    font-size: 4.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .main_card__sub_header {
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+  }
+
+  .main_card__subject {
+    max-width: 17rem;
+    line-height: 1.5rem;
+    @media (min-width: 23rem) {
+      & {
+        max-width: 18rem;
+      }
+    }
+
+    @media (min-width: 30rem) {
+      & {
+        max-width: 27rem;
+      }
+    }
+
+    @media (min-width: 40rem) {
+      & {
+        width: 90%;
+        max-width: 60rem;
+      }
+    }
+  }
+
+  .main_card__btn {
+    margin-top: 2rem;
+    height: 3.7rem;
+    width: 10rem;
+  }
+
+  @media (min-width: 50rem) {
+    & {
+      padding: 0 5rem;
+      margin-left: 7rem;
+    }
+  }
+}

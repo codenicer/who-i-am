@@ -1,0 +1,15 @@
+$color-darkest: #0e1c3a;
+
+$color-less-white: #1fc1f7;
+$color-white-sub: #f7bd82d5;
+$color-white: #fcdab7;
+
+@font-face {
+  font-family: 'nav-font';
+  src: url('../public//MavenPro-Regular.ttf');
+}
+
+%reset-padding-margin {
+  padding: 0;
+  margin: 0;
+}

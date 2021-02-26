@@ -1,0 +1,51 @@
+@import '_variables.scss';
+
+.main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: minmax(calc(100vh - 5.625rem), auto) auto;
+}
+
+.about_card {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 1rem;
+
+  .about_container {
+    display: flex;
+    align-items: center;
+  }
+
+  .about_title {
+    color: $color-white;
+    @extend %reset-padding-margin;
+    &::before {
+      content: '>>';
+      font-family: 'Roboto Mono', monospace;
+      color: $color-less-white;
+      font-size: 1.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  .vertical_line {
+    margin-left: 2rem;
+    border-bottom: 1px solid #1fc1f7a2;
+    width: 40%;
+  }
+
+  .about_subject,
+  .tech_list {
+    color: $color-white-sub;
+  }
+
+  .tech_list {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+  }
+}
