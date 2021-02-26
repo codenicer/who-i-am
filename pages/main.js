@@ -16,31 +16,36 @@ export default function Main() {
       <div className={styles.content}>
         <MainPageCard done={doneState} />
         <div className={styles.about_card}>
-          <div className={styles.about_container}>
-            <h1 className={styles.about_title}>About</h1>
-            <div className={styles.vertical_line}></div>
+          <div className={styles.about_info}>
+            <div className={styles.about_container}>
+              <h1 className={styles.about_title}>About</h1>
+              <div className={styles.vertical_line}></div>
+            </div>
+            <p className={styles.about_subject}>
+              In pharetra, massa porta pharetra posuere, tellus diam scelerisque
+              purus, ut elementum sem diam in nisl. Proin at quam volutpat,
+              bibendum dolor vitae, iaculis quam. Integer quis gravida odio,
+              vitae aliquam tellus.{' '}
+            </p>
+            <p className={styles.about_subject}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui
+              odio, tincidunt et erat eget, ultricies tempor turpis. Vivamus
+              eget pellentesque nunc, sed maximus orci. Etiam gravida vitae
+              justo et congue. Suspendisse sit amet vestibulum leo. Nunc
+              facilisis augue non justo congue, sed viverra tortor laoreet.{' '}
+            </p>
+            <p className={styles.about_subject}>
+              Here`s the technologies Ive been enhancing through my works:
+            </p>
+            <ul className={styles.tech_list}>
+              {techList.map((tech, i) => {
+                return <li key={i}>{tech}</li>
+              })}
+            </ul>
           </div>
-          <p className={styles.about_subject}>
-            In pharetra, massa porta pharetra posuere, tellus diam scelerisque
-            purus, ut elementum sem diam in nisl. Proin at quam volutpat,
-            bibendum dolor vitae, iaculis quam. Integer quis gravida odio, vitae
-            aliquam tellus.{' '}
-          </p>
-          <p className={styles.about_subject}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui
-            odio, tincidunt et erat eget, ultricies tempor turpis. Vivamus eget
-            pellentesque nunc, sed maximus orci. Etiam gravida vitae justo et
-            congue. Suspendisse sit amet vestibulum leo. Nunc facilisis augue
-            non justo congue, sed viverra tortor laoreet.{' '}
-          </p>
-          <p className={styles.about_subject}>
-            Here`s the technologies Ive been enhancing through my works:
-          </p>
-          <ul className={styles.tech_list}>
-            {techList.map((tech, i) => {
-              return <li key={i}>{tech}</li>
-            })}
-          </ul>
+          <div className={styles.img_cont}>
+            <img src="/me.jpg" />
+          </div>
         </div>
       </div>
       <Links done={doneState} />
