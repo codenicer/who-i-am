@@ -2,7 +2,11 @@ import { useState, useEffect } from 'react'
 import styles from '../styles/MobileNav.module.scss'
 export default function MobileNav({ done }) {
   const [hide, setHide] = useState(false)
-  const [scrollUp, setScrollUp] = useState({ lastPos: 0 })
+  const [scrollUp, setScrollUp] = useState({
+    lastPos: 0,
+    scroll: false,
+    onTop: true,
+  })
   const [classes, setClasses] = useState([`${styles.mobile_nav}`])
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset
@@ -11,35 +15,52 @@ export default function MobileNav({ done }) {
       if (currentScrollPos < scrollUp.lastPos) {
         setScrollUp({
           lastPos: currentScrollPos,
+          scroll: true,
+          onTop: false,
         })
         setHide(false)
       } else {
         setScrollUp({
           lastPos: currentScrollPos,
+          scroll: false,
+          onTop: false,
         })
         setHide(true)
       }
+    } else if (currentScrollPos === 0) {
+      setScrollUp({
+        ...scrollUp,
+        onTop: true,
+      })
     } else {
       setHide(false)
       setScrollUp({
-        lastPos: 0,
-        scrollUp: false,
+        ...scrollUp,
+        scroll: false,
+        onTop: false,
       })
     }
   }
 
   useEffect(() => {
-    console.log(hide, done)
     if (done) {
       setClasses([`${styles.mobile_nav}`, 'ani-nav'])
 
       if (hide) {
         setClasses([`${styles.mobile_nav}`, 'mnav-hide'])
-      } else {
+      }
+      if (scrollUp.scroll) {
+        setClasses([`${styles.mobile_nav}`, 'ani-nav-scroll-down'])
+      }
+
+      if (scrollUp.onTop) {
+        console.log('QWEQW')
         setClasses([`${styles.mobile_nav}`, 'ani-nav'])
       }
     }
-  }, [hide, done])
+  }, [hide, done, scrollUp.onTop])
+
+  console.log(scrollUp)
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
