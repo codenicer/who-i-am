@@ -3,6 +3,7 @@
 .about_card {
   display: grid;
   grid-template-columns: 6fr 4fr;
+  grid-template-rows: auto auto;
   padding: 8rem 1rem;
 
   .about_container {
@@ -13,9 +14,11 @@
 
   .about_info {
     grid-column: 1 / span 2;
+    padding: 0 0.5rem;
   }
 
   .about_title {
+    font-size: clamp(23px, 4vw, 2rem);
     color: $color-white;
     @extend %reset-padding-margin;
 
@@ -23,15 +26,15 @@
       content: '>>';
       font-family: 'Roboto Mono', monospace;
       color: $color-less-white;
-      font-size: 1.5rem;
+      font-size: clamp(20px, 4vw, 2rem);
       padding-right: 0.5rem;
     }
   }
 
   .vertical_line {
-    margin-left: 2rem;
-    border-bottom: 1px solid #1fc1f7a2;
-    width: 40%;
+    margin-left: 1rem;
+    border-bottom: 1px solid #1fc1f733;
+    width: 50%;
   }
 
   .about_subject {
@@ -61,26 +64,39 @@
 
     li {
       height: 1.3rem;
-      // max-width: 2rem;
     }
   }
 
   .img_cont {
-    margin-top: 2.2rem;
-    display: none;
-    width: 42%;
-    height: calc(10vw * 1.72);
+    margin: 2rem;
+    justify-self: center;
     border: 2px solid $color-less-white;
+    grid-column: 1 / span 2;
+    width: 250px;
+    height: 265px;
+    border-radius: 1rem;
+    transition: all 0.4s ease;
+    padding: 1rem;
+    display: flex;
+
     img {
+      transition: all 0.4s ease;
       filter: hue-rotate(188deg) saturate(0.4);
-      height: 100%;
-      transform: translate(-1.4rem, -1.4rem);
+    }
+
+    &:hover {
+      transform: translate(-1.5rem, -1.5rem);
+
+      img {
+        transform: translate(1.5rem, 1.5rem) scale(1.1);
+        filter: none;
+      }
     }
   }
 
   @media (min-width: 40rem) {
     .tech_list {
-      height: 15rem;
+      height: 16rem;
     }
 
     .about_info {

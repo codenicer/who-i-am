@@ -168,7 +168,7 @@ button {
   @keyframes ani-links {
     0% {
       visibility: visible;
-      transform: translateX(-100%);
+      transform: translateX(100%);
       opacity: 0;
     }
     100% {
@@ -177,6 +177,21 @@ button {
       opacity: 1;
     }
   }
+
+  // animation: ani-links ease 1s forwards;
+  // animation-delay: 1.3s;
+  // @keyframes ani-links {
+  //   0% {
+  //     visibility: visible;
+  //     transform: translateX(-100%);
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     visibility: visible;
+  //     transform: translateX(0);
+  //     opacity: 1;
+  //   }
+  // }
 }
 
 .ani-quoute {

@@ -18,7 +18,7 @@ export default function About({ inViewport }) {
       <div className={styles.about_card}>
         <div className={styles.about_info}>
           <div className={styles.about_container}>
-            <h1 className={styles.about_title}>About</h1>
+            <h1 className={styles.about_title}>About Me</h1>
             <div className={styles.vertical_line}></div>
           </div>
           <text className={styles.about_subject}>{about.nameTitle}</text>
