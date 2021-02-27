@@ -125,7 +125,8 @@
 
   @media (min-width: 72.44rem) {
     grid-template-columns: 7fr 3fr;
-
+    max-width: 81rem;
+    justify-self: center;
     .about_info {
       padding-right: 5rem;
       width: 89%;
@@ -133,10 +134,10 @@
     }
   }
 
-  @media (min-width: 83.13rem) {
-    justify-self: center;
-    align-self: center;
-    grid-template-columns: 7fr 3fr;
-    max-width: 1500px;
-  }
+  // @media (min-width: 83.13rem) {
+  //   justify-self: center;
+  //   align-self: center;
+  //   grid-template-columns: 7fr 3fr;
+  //   max-width: 1500px;
+  // }
 }
