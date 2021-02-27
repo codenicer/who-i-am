@@ -7,10 +7,11 @@
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 10rem;
+  align-items: center;
 
   svg {
     height: 2rem;
-    margin-left: 1rem;
+    margin-left: 1.8rem;
     .paths {
       stroke: $color-white;
       fill: $color-less-white;
@@ -40,7 +41,6 @@
       }
 
       .nav_link_container {
-        padding-top: 0.7rem;
         grid-area: 1 / 2 / span 1 / span 1;
       }
     }

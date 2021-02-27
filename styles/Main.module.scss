@@ -17,6 +17,7 @@
   padding: 8rem 1rem;
 
   .about_container {
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
   }
@@ -28,6 +29,7 @@
   .about_title {
     color: $color-white;
     @extend %reset-padding-margin;
+
     &::before {
       content: '>>';
       font-family: 'Roboto Mono', monospace;
@@ -44,7 +46,12 @@
   }
 
   .about_subject {
+    line-height: 1.5rem;
     max-width: 90%;
+  }
+
+  .about_subject:first-of-type {
+    margin-bottom: 1.5rem;
   }
 
   .about_subject,
@@ -127,7 +134,9 @@
   }
 
   @media (min-width: 83.13rem) {
+    justify-self: center;
+    align-self: center;
     grid-template-columns: 7fr 3fr;
-    max-width: 1326px;
+    max-width: 1500px;
   }
 }
