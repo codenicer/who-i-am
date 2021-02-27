@@ -22,17 +22,18 @@
     font-family: 'Roboto Mono', monospace;
     font-size: 1.1rem;
     color: $color-less-white;
+    margin: 0 0 1rem 0.5rem;
   }
 
   .main_card__header {
     color: $color-white;
-    font-size: 4.3rem;
+    font-size: clamp(35px, 7vw, 75px);
     margin-bottom: 0.8rem;
   }
 
   .main_card__sub_header {
     margin-bottom: 3rem;
-    font-size: 3.5rem;
+    font-size: clamp(25px, 6vw, 65px);
   }
 
   .main_card__subject {

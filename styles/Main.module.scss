@@ -1,6 +1,7 @@
 @import '_variables.scss';
 
 .main {
+  margin-top: 3rem;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -8,7 +9,7 @@
 
 .content {
   display: grid;
-  grid-template-rows: minmax(calc(100vh - 5.625rem), auto) minmax(100vh, auto);
+  grid-template-rows: minmax(calc(100vh - 3rem), auto) minmax(100vh, auto);
 }
 
 .about_card {
