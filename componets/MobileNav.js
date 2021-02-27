@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from '../styles/MobileNav.module.scss'
 export default function MobileNav({ done }) {
+  const [checked, setCheked] = useState(false)
   const [hide, setHide] = useState(false)
   const [scrollUp, setScrollUp] = useState({
     lastPos: 0,
@@ -47,6 +48,7 @@ export default function MobileNav({ done }) {
       setClasses([`${styles.mobile_nav}`, 'ani-nav'])
 
       if (hide) {
+        setCheked(false)
         setClasses([`${styles.mobile_nav}`, 'mnav-hide'])
       }
       if (scrollUp.scroll) {
@@ -60,8 +62,6 @@ export default function MobileNav({ done }) {
     }
   }, [hide, done, scrollUp.onTop])
 
-  console.log(scrollUp)
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
 
@@ -70,7 +70,12 @@ export default function MobileNav({ done }) {
 
   return (
     <nav className={classes.join(' ')}>
-      <input type="checkbox" className={styles.mobile_nav_checkbox} />
+      <input
+        checked={checked}
+        onChange={() => setCheked(!checked)}
+        type="checkbox"
+        className={styles.mobile_nav_checkbox}
+      />
       <div className={styles.mobile_nav_humberger}>
         <div></div>
       </div>
