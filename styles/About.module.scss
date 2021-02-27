@@ -1,0 +1,132 @@
+@import '_variables.scss';
+
+.about_card {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  padding: 8rem 1rem;
+
+  .about_container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .about_info {
+    grid-column: 1 / span 2;
+  }
+
+  .about_title {
+    color: $color-white;
+    @extend %reset-padding-margin;
+
+    &::before {
+      content: '>>';
+      font-family: 'Roboto Mono', monospace;
+      color: $color-less-white;
+      font-size: 1.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  .vertical_line {
+    margin-left: 2rem;
+    border-bottom: 1px solid #1fc1f7a2;
+    width: 40%;
+  }
+
+  .about_subject {
+    line-height: 1.5rem;
+    max-width: 90%;
+  }
+
+  .about_subject:first-of-type {
+    margin-bottom: 1.5rem;
+  }
+
+  .about_subject,
+  .tech_list {
+    color: $color-white-sub;
+  }
+
+  .tech_list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    // width: 18rem;
+    @extend %reset-padding-margin;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    list-style: square inside url('/arrow.svg');
+
+    li {
+      height: 1.3rem;
+      // max-width: 2rem;
+    }
+  }
+
+  .img_cont {
+    margin-top: 2.2rem;
+    display: none;
+    width: 42%;
+    height: calc(10vw * 1.72);
+    border: 2px solid $color-less-white;
+    img {
+      filter: hue-rotate(188deg) saturate(0.4);
+      height: 100%;
+      transform: translate(-1.4rem, -1.4rem);
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .tech_list {
+      height: 15rem;
+    }
+
+    .about_info {
+      display: flex;
+      flex-direction: column;
+      padding-left: 10%;
+    }
+  }
+
+  @media (min-width: 62.5rem) {
+    grid-template-columns: 7fr 3fr;
+
+    .about_info {
+      margin-left: 2rem;
+      grid-column: 1;
+    }
+
+    .img_cont {
+      display: block;
+      width: 57%;
+      height: calc(10vw * 1.72);
+      max-width: 205px;
+      max-height: 216px;
+
+      img {
+        max-width: 222px;
+        max-height: 208px;
+      }
+    }
+  }
+
+  @media (min-width: 72.44rem) {
+    grid-template-columns: 7fr 3fr;
+    max-width: 81rem;
+    justify-self: center;
+    .about_info {
+      padding-right: 5rem;
+      width: 89%;
+      justify-self: flex-end;
+    }
+  }
+
+  // @media (min-width: 83.13rem) {
+  //   justify-self: center;
+  //   align-self: center;
+  //   grid-template-columns: 7fr 3fr;
+  //   max-width: 1500px;
+  // }
+}
