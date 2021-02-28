@@ -6,9 +6,6 @@ import { useEffect, useState } from 'react'
 
 export default function About({ inViewport }) {
   const [hidden, setHidden] = useState(false)
-  useEffect(() => {
-    inViewport && setHidden(true)
-  }, [inViewport])
 
   return (
     <ScrollAnimation
@@ -22,8 +19,8 @@ export default function About({ inViewport }) {
             <h1 className={'heading_title'}>About Me</h1>
             <div className={'heading_vertical_line'}></div>
           </div>
-          <text className={styles.about_subject}>{about.nameTitle}</text>
-          <text className={styles.about_subject}>{about.firstP}</text>
+          <p className={styles.about_subject}>{about.nameTitle}</p>
+          <p className={styles.about_subject}>{about.firstP}</p>
           <p className={styles.about_subject}>{about.secondP}</p>
           <p className={styles.about_subject}>{about.techAbout}</p>
           <ul className={styles.tech_list}>

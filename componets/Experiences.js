@@ -1,14 +1,25 @@
 import ScrollAnimation from 'react-animate-on-scroll'
 import styles from '../styles/Experience.module.scss'
 import { useEffect, useState } from 'react'
+import { experiences } from '../utils/experience-list'
 
-export default function Experiences({ inViewport }) {
+export default function Experiences() {
+  const defaultClass = `${styles.timeline_info}`
   const [hidden, setHidden] = useState(false)
+  const [index, setIndex] = useState(0)
+  const [classes, setClasses] = useState([defaultClass])
 
-  useEffect(() => {
-    inViewport && setHidden(true)
-  }, [inViewport])
+  const onClickHandler = async (_index) => {
+    if (_index !== index) {
+      setIndex(_index)
+      await setClasses([defaultClass, 'ani-show-exp'])
+      setTimeout(() => {
+        setClasses([defaultClass])
+      }, 500)
+    }
+  }
 
+  const selectedExp = experiences[index]
   return (
     <ScrollAnimation
       animateOnce
@@ -24,33 +35,36 @@ export default function Experiences({ inViewport }) {
           <div className={styles.experences}>
             <div className={styles.timeline}>
               <div className={styles.timeline_line}></div>
-              <button className={styles.timeline_btn}>2019</button>
-
-              <button className={styles.timeline_btn}>2021</button>
+              <button
+                active={true}
+                onClick={() => onClickHandler(0)}
+                className={`${styles.timeline_btn} ${
+                  index === 0 ? 'btn-active' : ''
+                }`}
+              >
+                2018
+              </button>
+              <button
+                onClick={() => onClickHandler(1)}
+                className={`${styles.timeline_btn} ${
+                  index === 1 ? 'btn-active' : ''
+                }`}
+              >
+                2021
+              </button>
             </div>
-            <div className={styles.timeline_info}>
+            <div className={classes.join(' ')}>
               <div className={styles.timeline_heading}>
-                <h4>Web Developer</h4>
-                <h4>@ Flowerstore.ph</h4>
+                <h4>{selectedExp.position}</h4>
+                <h4>@ {selectedExp.companyName}</h4>
               </div>
               <p className={styles.timeline_date}>
-                January 2019 - January 2020
+                {selectedExp.dateFrom} - {selectedExp.dateTo}
               </p>
               <ul className={styles.timeline_work_list}>
-                <li>
-                  Worked with a team of four web developer to build a end to end
-                  system for the company, and two ecommerce website at the same
-                  time while maintaining the quality of the application for the
-                  customer .
-                </li>
-                <li>
-                  Collaborate on maintaining and organizing database for future
-                  proof data storing.
-                </li>
-                <li>
-                  Helped on renovating for automation little by little, a big
-                  step up for the company.
-                </li>
+                {selectedExp.actions.map((ac, i) => {
+                  return <li key={i}>{ac}</li>
+                })}
               </ul>
             </div>
           </div>

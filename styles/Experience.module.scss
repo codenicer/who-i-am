@@ -17,7 +17,7 @@
     grid-row: 2fr 8fr;
 
     .timeline {
-      width: 80%;
+      width: 88%;
       display: flex;
       position: relative;
       margin-top: 2rem;
@@ -84,8 +84,8 @@
         @extend %reset-padding-margin;
         width: 80%;
         li {
-          font-size: 0.9rem;
-          line-height: 1.3rem;
+          font-size: 0.94rem;
+          line-height: 1.5rem;
           position: relative;
           padding-left: 3rem;
           @extend %reset-padding-margin;

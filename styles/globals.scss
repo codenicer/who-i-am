@@ -57,6 +57,13 @@ button {
   }
 }
 
+.btn-active {
+  background: $color-less-white;
+  cursor: pointer;
+  outline: none;
+  color: $color-darkest;
+}
+
 .hide {
   display: none !important;
 }
@@ -138,6 +145,18 @@ button {
   }
 }
 
+.ani-show-exp {
+  animation: ani-show-exp ease 0.5s forwards;
+  @keyframes ani-show-exp {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 .mnav-hide {
   animation: mnav-hide ease 0.4s forwards;
   @keyframes mnav-hide {
@@ -155,7 +174,7 @@ button {
 }
 
 .ani-viewport {
-  animation: ani-viewport ease 1.2s forwards;
+  animation: ani-viewport ease 0.9s forwards;
   @keyframes ani-viewport {
     0% {
       transform: translateY(100%);
