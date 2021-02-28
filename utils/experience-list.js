@@ -16,7 +16,7 @@ export const experiences = [
     dateFrom: 'August 2020',
     dateTo: 'Current Date',
     actions: [
-      'Worked as freelancer web developer ,this is my choice for self and skills improvements',
+      'Worked as freelancer web developer ,my choice for improving my skills and self discipline',
       'Interfaced with clients on a weekly basis, providing good quality product and technological expertise',
     ],
   },

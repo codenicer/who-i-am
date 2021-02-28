@@ -8,6 +8,7 @@ import MainPageCard from '../componets/MainPageCard'
 import Experiences from '../componets/Experiences'
 import handleViewport from 'react-in-viewport'
 import About from '../componets/About'
+import Projects from '../componets/Projects'
 import { doneLoadingState } from '../provider/DoneLoadingContext'
 
 const ViewportAbout = handleViewport(About)
@@ -28,6 +29,7 @@ export default function Main() {
         {/* <ViewportAbout /> */}
         <About />
         <Experiences />
+        <Projects />
         {/* <ViewportExperiences /> */}
       </div>
       <Links done={doneState} />

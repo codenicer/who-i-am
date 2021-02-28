@@ -1,0 +1,10 @@
+.projects_cotainer {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto;
+  padding: 8rem 1rem;
+
+  .projects_info > div {
+    padding: 0 0.5rem;
+  }
+}
