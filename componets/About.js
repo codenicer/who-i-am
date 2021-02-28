@@ -12,14 +12,15 @@ export default function About({ inViewport }) {
 
   return (
     <ScrollAnimation
-      animateIn="ani-about"
-      className={`${hidden ? '' : 'hide2'}`}
+      animateOnce
+      animateIn="ani-viewport"
+      className={`${hidden ? '' : 'hidden'}`}
     >
       <div className={styles.about_card}>
         <div className={styles.about_info}>
-          <div className={styles.about_container}>
-            <h1 className={styles.about_title}>About Me</h1>
-            <div className={styles.vertical_line}></div>
+          <div className={'heading_container'}>
+            <h1 className={'heading_title'}>About Me</h1>
+            <div className={'heading_vertical_line'}></div>
           </div>
           <text className={styles.about_subject}>{about.nameTitle}</text>
           <text className={styles.about_subject}>{about.firstP}</text>

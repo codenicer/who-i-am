@@ -5,11 +5,13 @@ import MobileNav from '../componets/MobileNav'
 import Links from '../componets/Links'
 import Qoute from '../componets/Qoute'
 import MainPageCard from '../componets/MainPageCard'
+import Experiences from '../componets/Experiences'
+import handleViewport from 'react-in-viewport'
 import About from '../componets/About'
 import { doneLoadingState } from '../provider/DoneLoadingContext'
 
-import handleViewport from 'react-in-viewport'
-const ViewportBlock = handleViewport(About)
+const ViewportAbout = handleViewport(About)
+const ViewportExperiences = handleViewport(Experiences)
 
 export default function Main() {
   const doneState = doneLoadingState()
@@ -23,7 +25,10 @@ export default function Main() {
       <MobileNav done={doneState} />
       <div className={styles.content}>
         <MainPageCard done={doneState} />
-        <ViewportBlock />
+        {/* <ViewportAbout /> */}
+        <About />
+        <Experiences />
+        {/* <ViewportExperiences /> */}
       </div>
       <Links done={doneState} />
       <Qoute done={doneState} />
