@@ -172,4 +172,10 @@
       white-space: pre;
     }
   }
+
+  @media (min-width: 48rem) {
+    & {
+      display: none;
+    }
+  }
 }

@@ -12,6 +12,7 @@ import Projects from '../componets/Projects'
 export default function Main(doneState) {
   return (
     <main className={styles.main}>
+      <Navbar />
       <MobileNav done={doneState} />
       <div className={styles.content}>
         <MainPageCard done={doneState} />

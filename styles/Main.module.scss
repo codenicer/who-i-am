@@ -4,8 +4,9 @@
   margin-top: 3rem;
   height: 100%;
   display: grid;
-
-  // overflow: hidden;
+  @media (min-width: 48rem) {
+    margin-top: 1rem;
+  }
 }
 
 .content {

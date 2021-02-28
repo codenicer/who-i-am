@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Navbar({ done }) {
   return (
-    <nav className={`${styles.nav} ${done ? 'ani-nav' : ''}`}>
+    <nav className={`${styles.nav} ${true ? 'ani-nav' : ''}`}>
       <div className={styles.logo_container}>
         <a href="#">
           <svg
