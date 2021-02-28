@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Main from './main'
-import Footer from './footer'
+import Footer from '../componets/Footer'
+import Loader from './loader'
+import { doneLoadingState } from '../provider/DoneLoadingContext'
 
 export default function Home() {
-  return (
+  const doneState = doneLoadingState()
+  return !doneState ? (
+    <Loader />
+  ) : (
     <div className={styles.container}>
       <Head>
         <meta charSet="UTF-8" />
@@ -13,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

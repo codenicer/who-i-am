@@ -1,8 +1,8 @@
 import styles from '../styles/Links.module.scss'
 
-export default function Links({ done }) {
+export default function Links() {
   return (
-    <div className={`${styles.links_container} ${done ? 'ani-links' : ''}`}>
+    <div className={`${styles.links_container} ${false ? 'ani-links' : ''}`}>
       <ul className={styles.links_list}>
         <li className={styles.github_link}>
           <svg viewBox="0 0 256 250">

@@ -1,4 +1,5 @@
 import styles from '../styles/MainPageCard.module.scss'
+import { generalSetting } from '../utils/general'
 
 export default function MainPageCard({ done }) {
   return (
@@ -12,7 +13,9 @@ export default function MainPageCard({ done }) {
         Additionaly adding implementaion of continues integration and
         development for the application.
       </p>
-      <button className={styles.main_card__btn}> Get In Touch </button>
+      <a href={generalSetting.emailTo}>
+        <button className={styles.main_card__btn}> Get In Touch </button>
+      </a>
     </div>
   )
 }

@@ -84,10 +84,18 @@ export default function MobileNav({ done }) {
         <div>
           <div>
             <ul className={styles.mobile_nav_link_list}>
-              <li>About</li>
-              <li>Experience</li>
-              <li>Projects</li>
-              <li>Contact</li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#experiences">Experience</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
         </div>

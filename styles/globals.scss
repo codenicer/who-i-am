@@ -270,3 +270,10 @@ button {
     }
   }
 }
+
+svg:hover {
+  cursor: pointer;
+  path {
+    fill: $color-less-white;
+  }
+}

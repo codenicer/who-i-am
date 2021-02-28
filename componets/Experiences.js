@@ -21,7 +21,7 @@ export default function Experiences() {
   const selectedExp = experiences[index]
   return (
     <ScrollAnimation animateOnce animateIn="ani-viewport">
-      <div className={styles.experience_card}>
+      <div id="experiences" className={styles.experience_card}>
         <div className={styles.experience_info}>
           <div className={'heading_container'}>
             <h1 className={'heading_title'}>Experiences</h1>

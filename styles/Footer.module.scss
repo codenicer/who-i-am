@@ -1,0 +1,50 @@
+@import '_variables.scss';
+
+.main_footer {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .footer_contianer {
+    width: 80%;
+    .footer_links {
+      margin-bottom: 2rem;
+      .links_list {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+
+        li {
+          margin: 0 1.4rem;
+          svg {
+            @extend %reset-padding-margin;
+            height: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .footer_content {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @extend %reset-padding-margin;
+      a {
+        @extend %reset-padding-margin;
+        p {
+          font-family: 'Roboto Mono', monospace;
+          font-size: 0.9rem;
+          @extend %reset-padding-margin;
+          color: $color-white;
+          margin: 0.4rem 0;
+
+          &:hover {
+            color: $color-less-white;
+          }
+        }
+      }
+    }
+  }
+}

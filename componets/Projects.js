@@ -5,7 +5,7 @@ import { projectList } from '../utils/project-list'
 export default function Projects({ done }) {
   return (
     <ScrollAnimation animateOnce animateIn="ani-viewport">
-      <div className={styles.projects_cotainer}>
+      <div id="projects" className={styles.projects_cotainer}>
         <div className={styles.projects_info}>
           <div className={'heading_container'}>
             <h1 className={'heading_title'}>My works</h1>

@@ -13,7 +13,7 @@ export default function About({ inViewport }) {
       animateIn="ani-viewport"
       className={`${hidden ? '' : 'hidden'}`}
     >
-      <div className={styles.about_card}>
+      <div id="about" className={styles.about_card}>
         <div className={styles.about_info}>
           <div className={'heading_container'}>
             <h1 className={'heading_title'}>About Me</h1>
