@@ -5,7 +5,6 @@ import { experiences } from '../utils/experience-list'
 
 export default function Experiences() {
   const defaultClass = `${styles.timeline_info}`
-  const [hidden, setHidden] = useState(false)
   const [index, setIndex] = useState(0)
   const [classes, setClasses] = useState([defaultClass])
 
@@ -21,11 +20,7 @@ export default function Experiences() {
 
   const selectedExp = experiences[index]
   return (
-    <ScrollAnimation
-      animateOnce
-      animateIn="ani-viewport"
-      className={`${hidden ? '' : 'hide2'}`}
-    >
+    <ScrollAnimation animateOnce animateIn="ani-viewport">
       <div className={styles.experience_card}>
         <div className={styles.experience_info}>
           <div className={'heading_container'}>

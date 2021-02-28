@@ -11,19 +11,19 @@ body {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: $color-darkest;
+  background-color: $color-less-white;
   border-radius: 2px;
 }
 
 body::-webkit-scrollbar {
   width: 2px;
-  background-color: $color-darkest;
+  background-color: $color-less-white;
 }
 
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: $color-less-white;
-  white-space: pre-line;
+  // white-space: pre-line;
 }
 
 a {
