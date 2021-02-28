@@ -92,7 +92,7 @@ button {
   align-items: center;
 
   .heading_title {
-    font-size: clamp(23px, 4vw, 2rem);
+    font-size: clamp(20px, 4vw, 2rem);
     color: $color-white;
     @extend %reset-padding-margin;
 

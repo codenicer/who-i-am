@@ -1,117 +1,164 @@
 @import '_variables.scss';
 
 .about_card {
-  display: grid;
-  grid-template-columns: 6fr 4fr;
-  grid-template-rows: auto auto;
-  padding: 8rem 1rem;
-
-  .about_info {
-    grid-column: 1 / span 2;
-    padding: 0 0.5rem;
-    width: 87vw;
-  }
-
-  .about_subject {
-    line-height: 1.5rem;
-    width: 80vw;
-  }
-
-  .about_subject:first-of-type {
-    margin-bottom: 1.5rem;
-    width: 80vw;
-  }
-
-  .about_subject,
-  .tech_list {
-    color: $color-white-sub;
-  }
-
-  .tech_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .about_card_content {
+    width: 80%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 
-    // width: 18rem;
-    @extend %reset-padding-margin;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.85rem;
-    list-style: square inside url('/arrow.svg');
-
-    li {
-      height: 1.3rem;
-    }
-  }
-
-  .img_cont {
-    margin: 2rem;
-    justify-self: center;
-    border: 2px solid $color-less-white;
-    grid-column: 1 / span 2;
-    width: 250px;
-    height: 265px;
-    border-radius: 1rem;
-    transition: all 0.4s ease;
-    padding: 1rem;
-    display: flex;
-
-    img {
-      transition: all 0.4s ease;
-      filter: hue-rotate(188deg) saturate(0.4);
-    }
-
-    &:hover {
-      transform: translate(-1.5rem, -1.5rem);
-
-      img {
-        transform: translate(1.5rem, 1.5rem) scale(1.1);
-        filter: none;
-      }
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .tech_list {
-      height: 16rem;
+    .heading_cont_about {
+      grid-area: 1 / span 2;
     }
 
     .about_info {
+      grid-column: 1 / span 2;
+    }
+
+    .about_subject {
+      line-height: 1.5rem;
+    }
+
+    .about_subject,
+    .tech_list {
+      color: $color-white-sub;
+    }
+
+    .tech_list {
       display: flex;
       flex-direction: column;
-      padding-left: 10%;
-    }
-  }
+      flex-wrap: wrap;
+      height: auto; // width: 18rem;
+      @extend %reset-padding-margin;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.85rem;
+      list-style: square inside url('/arrow.svg');
 
-  @media (min-width: 62.5rem) {
-    grid-template-columns: 7fr 3fr;
-
-    .about_info {
-      margin-left: 2rem;
-      grid-column: 1;
+      li {
+        width: 15rem;
+        height: 1.3rem;
+      }
     }
 
     .img_cont {
-      display: block;
-      width: 57%;
-      height: calc(10vw * 1.72);
-      max-width: 205px;
-      max-height: 216px;
+      display: flex;
+      justify-content: center;
+      transition: all 0.4s ease;
+
+      .image_box {
+        margin-top: 4rem;
+        border: 2px solid $color-less-white;
+        width: 250px;
+        height: 265px;
+        border-radius: 0.5rem;
+        transition: all 0.4s ease;
+        padding: 1rem;
+        display: flex;
+      }
 
       img {
-        max-width: 222px;
-        max-height: 208px;
+        transition: all 0.4s ease;
+        filter: hue-rotate(188deg) saturate(0.4);
+      }
+
+      &:hover {
+        transform: translate(-1.5rem, -1.5rem);
+
+        img {
+          transform: translate(1.5rem, 1.5rem) scale(1.1);
+          filter: none;
+        }
       }
     }
-  }
 
-  @media (min-width: 72.44rem) {
-    grid-template-columns: 7fr 3fr;
-    max-width: 81rem;
-    justify-self: center;
-    .about_info {
-      padding-right: 5rem;
-      width: 89%;
-      justify-self: flex-end;
+    @media (min-width: 48rem) {
+      .tech_list {
+        height: 16rem;
+      }
+
+      .about_info {
+        // width: 100%;
+        display: grid;
+
+        grid-template-columns: 6fr 4fr;
+        grid-template-areas:
+          'title pic'
+          'firstp pic'
+          'secondp secondp'
+          'techinfo techinfo'
+          'list1 list1';
+
+        .about_subject {
+          margin: 0.6rem 0;
+        }
+
+        .about_subject_title {
+          grid-area: title;
+          align-self: center;
+        }
+
+        .about_subject_fp {
+          grid-area: firstp;
+        }
+        .about_subject_sp {
+          grid-area: secondp;
+        }
+
+        .about_subject_techabout {
+          grid-area: techinfo;
+        }
+
+        .tech_list {
+          grid-area: list1;
+        }
+
+        .img_cont {
+          grid-area: pic;
+          justify-self: flex-end;
+          .image_box {
+            margin-top: 0;
+            width: 28.2vw;
+            height: 30vw;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 62.5rem) {
+      grid-template-columns: 7fr 3fr;
+
+      .about_info {
+        margin-left: 2rem;
+        grid-column: 1;
+      }
+
+      .img_cont {
+        display: block;
+        width: 57%;
+        height: calc(10vw * 1.72);
+        max-width: 205px;
+        max-height: 216px;
+
+        img {
+          max-width: 222px;
+          max-height: 208px;
+        }
+      }
+    }
+
+    @media (min-width: 72.44rem) {
+      grid-template-columns: 7fr 3fr;
+      max-width: 81rem;
+      justify-self: center;
+      .about_info {
+        padding-right: 5rem;
+        width: 89%;
+        justify-self: flex-end;
+      }
     }
   }
 

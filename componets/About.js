@@ -14,23 +14,40 @@ export default function About({ inViewport }) {
       className={`${hidden ? '' : 'hidden'}`}
     >
       <div id="about" className={styles.about_card}>
-        <div className={styles.about_info}>
-          <div className={'heading_container'}>
+        <div className={styles.about_card_content}>
+          <div className={'heading_container ' + styles.heading_cont_about}>
             <h1 className={'heading_title'}>About Me</h1>
             <div className={'heading_vertical_line'}></div>
           </div>
-          <p className={styles.about_subject}>{about.nameTitle}</p>
-          <p className={styles.about_subject}>{about.firstP}</p>
-          <p className={styles.about_subject}>{about.secondP}</p>
-          <p className={styles.about_subject}>{about.techAbout}</p>
-          <ul className={styles.tech_list}>
-            {techList.map((tech, i) => {
-              return <li key={i}>{tech}</li>
-            })}
-          </ul>
-        </div>
-        <div className={styles.img_cont}>
-          <img src="/me.jpg" />
+          <div className={styles.about_info}>
+            <p
+              className={`${styles.about_subject} ${styles.about_subject_title}`}
+            >
+              {about.nameTitle}
+            </p>
+            <p className={`${styles.about_subject} ${styles.about_subject_fp}`}>
+              {about.firstP}
+            </p>
+            <p className={`${styles.about_subject} ${styles.about_subject_sp}`}>
+              {about.secondP}
+            </p>
+            <p
+              className={`${styles.about_subject}  ${styles.about_subject_techabout}`}
+            >
+              {about.techAbout}
+            </p>
+            <ul className={`${styles.tech_list}`}>
+              {techList.map((tech, i) => {
+                return <li key={i}>{tech}</li>
+              })}
+            </ul>
+
+            <div className={`${styles.img_cont} `}>
+              <div className={styles.image_box}>
+                <img src="/me.jpg" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </ScrollAnimation>

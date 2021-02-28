@@ -13,6 +13,6 @@ export const techList = [
   'Laravel 7',
   'MongoDB',
   'SQL(Postgresql, Mysql)',
-  'Data mining(Puppeteer , NightmareJS)',
+  'Puppeteer , NightmareJS',
   'HTML & (S)CSS',
 ]

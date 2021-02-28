@@ -31,7 +31,6 @@ export default function Experiences() {
             <div className={styles.timeline}>
               <div className={styles.timeline_line}></div>
               <button
-                active={true}
                 onClick={() => onClickHandler(0)}
                 className={`${styles.timeline_btn} ${
                   index === 0 ? 'btn-active' : ''
