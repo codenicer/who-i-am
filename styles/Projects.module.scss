@@ -2,19 +2,18 @@
 
 .projects_cotainer {
   height: auto;
-  display: grid;
-  grid-template-rows: auto auto;
-  padding: 8rem 1rem;
+  display: flex;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 
-  .projects_info > div {
-    padding: 0 0.5rem;
+  .projects_info {
+    width: 80%;
   }
 
   .project_list_cont {
-    margin-top: 6rem;
     @extend %reset-padding-margin;
-
+    max-width: 36rem;
     .project_list {
       display: flex;
       flex-direction: column;
@@ -30,7 +29,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin: 5rem 0;
+        margin-top: 6rem;
         @extend %reset-padding-margin;
       }
     }
@@ -42,6 +41,7 @@
     transition: all 0.3s ease;
     height: 70vw;
     width: 90%;
+    max-width: 26rem;
     border: 1px solid $color-less-white;
 
     border-radius: 0.5rem;
@@ -52,9 +52,12 @@
       transition: inherit;
       @extend %reset-padding-margin;
       position: relative;
-      display: grid;
       height: 100%;
-      grid-template-rows: 1fr 1fr 4fr 1fr 1fr;
+      display: flex;
+      flex-direction: column;
+      // display: grid;
+
+      // grid-template-rows: 1fr 1fr 4fr 1fr 1fr;
 
       padding: 0 1rem;
       padding-top: 2rem;
@@ -63,7 +66,7 @@
         @extend %reset-padding-margin;
         color: $color-less-white;
         font-family: 'Roboto Mono', monospace;
-        font-size: 0.7rem;
+        font-size: clamp(14px, 2vw, 14px);
       }
       .project_title {
         @extend %reset-padding-margin;
@@ -74,18 +77,19 @@
       .project_decription {
         color: $color-white-sub;
         font-size: 0.9rem;
-        height: 50%;
+
+        // calc(12vh + 10%);
       }
 
       .tech_list {
-        justify-self: center;
+        align-self: center;
         color: $color-white;
         font-family: 'Roboto Mono', monospace;
         font-size: 0.8rem;
       }
 
       .project_links_list {
-        justify-self: center;
+        align-self: center;
         display: flex;
         width: 80%;
         align-items: center;
@@ -109,13 +113,16 @@
       position: absolute;
       bottom: 0;
       left: 10%;
-      height: 80vw;
+      // height: calc(1vw * 2vw);
       width: 80%;
+      max-width: 329px;
+      max-height: 355px;
       border-radius: 0.5rem;
       // opacity: 0;
     }
     &:hover {
-      height: 142vw;
+      height: 72vh;
+      max-height: 40rem;
       .project_content {
         // visibility: visible;
         transform: scale(1);

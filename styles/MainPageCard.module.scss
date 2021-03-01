@@ -8,6 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: auto;
+  // min-height: 70rem;
+  // height: 100vh;
+  // height: 150vw;
   .main_card_content {
     width: 80%;
   }

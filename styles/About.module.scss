@@ -5,12 +5,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   .about_card_content {
     width: 80%;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
     .heading_cont_about {
       grid-area: 1 / span 2;
     }
