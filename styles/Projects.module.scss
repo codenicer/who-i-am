@@ -113,6 +113,19 @@
         width: 80%;
         align-items: center;
         @extend %reset-padding-margin;
+
+        .project_link_null {
+          border-bottom: 2px solid $color-white-sub;
+          width: 1.5rem;
+          height: 1rem;
+          margin-bottom: 1rem;
+
+          &:hover {
+            cursor: pointer;
+            border-color: $color-less-white;
+          }
+        }
+
         .project_link {
           overflow: hidden;
           height: 2rem;
@@ -136,7 +149,7 @@
       width: 80%;
       max-width: 329px;
       max-width: 275px;
-      // max-height: 355px;
+      border: 2px solid $color-white;
       border-radius: 0.5rem;
       // opacity: 0;
     }
