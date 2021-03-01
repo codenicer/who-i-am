@@ -211,6 +211,13 @@
     }
   }
 
+  @media (min-width: 30rem) {
+    .project_card:hover {
+      height: 700px;
+      max-height: 700px;
+    }
+  }
+
   @media (min-width: 60rem) {
     .project_card {
       max-width: 700px;

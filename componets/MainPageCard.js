@@ -12,9 +12,9 @@ export default function MainPageCard({ done }) {
         </h2>
         <p className={styles.main_card__subject}>
           I am a full stack web developer based on Philippines. Building a web
-          application is my specialties, from setting up till deployment.
-          Additionaly adding implementaion of continues integration and
-          development for the application.
+          application is my specialties, from setting-up till deployment.
+          Additionaly implementing continues integration and development for the
+          application is must.
         </p>
         <a href={generalSetting.emailTo}>
           <button className={styles.main_card__btn}> Get In Touch </button>

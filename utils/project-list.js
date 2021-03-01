@@ -36,7 +36,7 @@ export const projectList = [
       'An end to end system for mananging client data and aligning data collected for internal process. The porpuse of the system is to automate data processing that will slow the process. Its also used to monitor full business statistics in real-time',
     projectTech: 'Javascript React Node JS Express Mysql',
     officialLink: null,
-    githubSource: 'https://github.com/codenicer/demo-mm-public',
+    githubSource: 'https://github.com/codenicer/demo-system-public',
     demoLink: 'https://code-nicer-e2-demo.herokuapp.com',
     photo: '/e2-img.png',
     demoAcc: ['admin: admin@email.com/test123'],
