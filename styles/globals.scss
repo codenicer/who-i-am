@@ -4,6 +4,7 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -82,6 +83,19 @@ button {
     100% {
       transform: translateY(100%);
       opacity: 0;
+    }
+  }
+}
+
+.fade-it-fast {
+  animation: fade-it-fast ease 1s;
+  @keyframes fade-it-fast {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      // transform: translateY(100%);
+      opacity: 1;
     }
   }
 }

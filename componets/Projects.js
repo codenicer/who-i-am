@@ -1,9 +1,23 @@
 import styles from '../styles/Projects.module.scss'
+import { useRouter } from 'next/router'
 import ScrollAnimation from 'react-animate-on-scroll'
 import { projectList } from '../utils/project-list'
 import { generalSetting } from '../utils/general'
+import { useState } from 'react'
 
-export default function Projects({ done }) {
+export default function Projects() {
+  const [toRender, setTorender] = useState(generalSetting.maxProjectRender)
+  const router = useRouter()
+
+  const onClickHandler = () => {
+    if (toRender >= projectList.length) {
+      setTorender(generalSetting.maxProjectRender)
+      router.push('#projects')
+    } else {
+      setTorender(toRender + generalSetting.maxProjectRender)
+    }
+  }
+
   return (
     <ScrollAnimation animateOnce animateIn="ani-viewport">
       <div id="projects" className={styles.projects_cotainer}>
@@ -14,10 +28,10 @@ export default function Projects({ done }) {
           </div>
           <div className={styles.project_list_cont}>
             <ul className={styles.project_list}>
-              {projectList.map((project, i) => {
+              {projectList.slice(0, toRender).map((project, i) => {
                 return (
                   <li key={i}>
-                    <div className={styles.project_card}>
+                    <div className={`${styles.project_card} fade-it-fast`}>
                       <div className={styles.project_content}>
                         <p className={styles.project_type}>
                           {project.projectType}
@@ -120,8 +134,10 @@ export default function Projects({ done }) {
               })}
             </ul>
             {projectList.length > generalSetting.maxProjectRender ? (
-              <button className style={styles.projects_show_more}>
-                Show More
+              <button onClick={onClickHandler}>
+                {toRender >= projectList.length
+                  ? 'Show Less'
+                  : 'Show More Project'}
               </button>
             ) : (
               <></>
