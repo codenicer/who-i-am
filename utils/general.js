@@ -4,4 +4,5 @@ export const generalSetting = {
   facebook: 'https://www.facebook.com/code.Nicer/',
   linkedin: 'https://www.linkedin.com/in/code-nicer/',
   twitter: '#',
+  maxProjectRender: 3,
 }

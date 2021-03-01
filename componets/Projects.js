@@ -1,6 +1,7 @@
 import styles from '../styles/Projects.module.scss'
 import ScrollAnimation from 'react-animate-on-scroll'
 import { projectList } from '../utils/project-list'
+import { generalSetting } from '../utils/general'
 
 export default function Projects({ done }) {
   return (

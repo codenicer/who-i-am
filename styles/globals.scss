@@ -127,7 +127,7 @@ button {
   animation: ani-nav ease 0.7s forwards;
   @keyframes ani-nav {
     0% {
-      visibility: visible;
+      visibility: hidden;
       transform: translateY(-100%);
       opacity: 0;
     }

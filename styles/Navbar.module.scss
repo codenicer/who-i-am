@@ -2,6 +2,7 @@
 
 .nav {
   @extend %reset-position;
+  opacity: 0;
   display: none;
   position: fixed;
   z-index: 20;
