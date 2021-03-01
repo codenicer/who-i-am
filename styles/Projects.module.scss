@@ -6,14 +6,16 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
-
+  min-height: 762px;
+  margin-bottom: 30vh;
   .projects_info {
     width: 80%;
+
+    max-width: 900px;
   }
 
   .project_list_cont {
     @extend %reset-padding-margin;
-    max-width: 36rem;
     .project_list {
       display: flex;
       flex-direction: column;
@@ -39,9 +41,10 @@
     position: relative;
     @extend %reset-padding-margin;
     transition: all 0.3s ease;
-    height: 70vw;
+    height: 50vw;
     width: 90%;
-    max-width: 26rem;
+    max-width: 350px;
+    max-height: 250px;
     border: 1px solid $color-less-white;
 
     border-radius: 0.5rem;
@@ -113,26 +116,89 @@
       position: absolute;
       bottom: 0;
       left: 10%;
-      // height: calc(1vw * 2vw);
+      height: 35vh;
       width: 80%;
       max-width: 329px;
-      max-height: 355px;
+      max-width: 275px;
+      // max-height: 355px;
       border-radius: 0.5rem;
       // opacity: 0;
     }
     &:hover {
-      height: 72vh;
-      max-height: 40rem;
+      height: 600px;
+      max-height: 600px;
       .project_content {
         // visibility: visible;
         transform: scale(1);
         height: 40vh;
       }
       img {
-        height: 60vw;
-        width: 80%;
+        height: 33vh;
+        width: 55vw;
         left: 10%;
+        max-width: 275px;
+        max-height: 312px;
         filter: none;
+      }
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .project_card {
+      width: 600px;
+      max-width: 600px;
+      height: 350px;
+      max-height: 350px;
+
+      img {
+        left: 23%;
+        height: 410px;
+        max-height: 380px;
+        max-width: 310px;
+      }
+
+      &:hover {
+        height: 350px;
+        max-height: 350px;
+        img {
+          left: 50%;
+          height: 450px;
+          max-height: 450px;
+          max-width: 340px;
+        }
+        .project_content {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 60rem) {
+    .project_card {
+      max-width: 700px;
+      width: 700px;
+      height: 410px;
+      max-height: 410px;
+
+      img {
+        left: 23%;
+        height: 410px;
+        max-height: 380px;
+        max-width: 310px;
+      }
+
+      &:hover {
+        height: 350px;
+        max-height: 350px;
+        img {
+          left: 50%;
+          height: 450px;
+          max-height: 450px;
+          max-width: 340px;
+        }
+        .project_content {
+          width: 50%;
+        }
       }
     }
   }

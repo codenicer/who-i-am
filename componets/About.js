@@ -42,7 +42,7 @@ export default function About({ inViewport }) {
               })}
             </ul>
 
-            <div className={`${styles.img_cont} `}>
+            <div className={`${styles.img_cont} ${styles.image_cont_center}`}>
               <div className={styles.image_box}>
                 <img src="/me.jpg" />
               </div>

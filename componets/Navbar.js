@@ -1,9 +1,75 @@
 import styles from '../styles/Navbar.module.scss'
-import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export default function Navbar({ done }) {
+  const [hide, setHide] = useState(false)
+  const [scrollUp, setScrollUp] = useState({
+    lastPos: 0,
+    scroll: false,
+    onTop: true,
+  })
+
+  const [classes, setClasses] = useState([`${styles.nav}`])
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset
+
+    if (currentScrollPos > 120) {
+      if (currentScrollPos < scrollUp.lastPos) {
+        setScrollUp({
+          lastPos: currentScrollPos,
+          scroll: true,
+          onTop: false,
+        })
+        setHide(false)
+      } else {
+        setScrollUp({
+          lastPos: currentScrollPos,
+          scroll: false,
+          onTop: false,
+        })
+        setHide(true)
+      }
+    } else if (currentScrollPos === 0) {
+      setScrollUp({
+        ...scrollUp,
+        onTop: true,
+      })
+    } else {
+      setHide(false)
+      setScrollUp({
+        ...scrollUp,
+        scroll: false,
+        onTop: false,
+      })
+    }
+  }
+
+  useEffect(() => {
+    if (done) {
+      setClasses([`${styles.nav}`, 'ani-nav'])
+
+      if (hide) {
+        setClasses([`${styles.nav}`, 'mnav-hide'])
+      }
+      if (scrollUp.scroll) {
+        setClasses([`${styles.nav}`, 'ani-nav-scroll-down'])
+      }
+
+      if (scrollUp.onTop) {
+        setClasses([`${styles.nav}`, 'ani-nav'])
+      }
+    }
+  }, [hide, done, scrollUp.onTop])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [scrollUp.lastPos])
+
   return (
-    <nav className={`${styles.nav} ${true ? 'ani-nav' : ''}`}>
+    <nav className={classes.join(' ')}>
       <div className={styles.logo_container}>
         <a href="#">
           <svg

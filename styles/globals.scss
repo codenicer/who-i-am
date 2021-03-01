@@ -93,7 +93,7 @@ button {
   align-items: center;
 
   .heading_title {
-    padding-right: 1rem;
+    padding-right: 0.5rem;
     z-index: 2;
     background-color: $color-darkest;
     position: relative;
@@ -112,11 +112,15 @@ button {
 }
 
 .heading_vertical_line {
-  top: 1.5rem;
+  top: 55%;
   z-index: 1;
   border-bottom: 1px solid #1fc1f733;
   width: 80%;
   position: absolute;
+
+  // @media (min-width: 48rem) {
+  //   top: 1.5rem;
+  // }
 }
 
 .ani-nav {
