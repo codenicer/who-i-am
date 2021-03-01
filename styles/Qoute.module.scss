@@ -2,32 +2,33 @@
 
 .qoute_container {
   visibility: hidden;
-  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   bottom: 0;
   position: fixed;
-  width: 3rem;
+  width: 2rem;
+  right: 0;
+
   // border: 1px solid red;
   @extend %reset-padding-margin;
 
+  height: 70vh;
   p {
-    color: $color-white;
+    color: #f8dbbe8e;
     writing-mode: vertical-rl;
     font-family: 'Roboto Mono', monospace;
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
   }
 
   .qoute_horizontal_line {
-    border-left: 1px solid #fcd9b7c2;
-    height: 6rem;
+    border-left: 1px solid #f8dbbe8e;
+    height: 7rem;
   }
 
-  @media (min-width: 70rem) {
-    & {
-      right: 2rem;
-    }
+  @media (min-width: 48rem) {
+    right: 2rem;
   }
 }

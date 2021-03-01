@@ -235,7 +235,7 @@ button {
 
 .ani-links {
   animation: ani-links ease 1s forwards;
-  animation-delay: 1s;
+  animation-delay: 0.7s;
   @keyframes ani-links {
     0% {
       visibility: hidden;
@@ -267,7 +267,7 @@ button {
 
 .ani-quoute {
   animation: ani-quoute ease 1s forwards;
-  animation-delay: 1.3s;
+  animation-delay: 0.7s;
   @keyframes ani-quoute {
     0% {
       visibility: visible;
