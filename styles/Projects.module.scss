@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   min-height: 762px;
-  // margin-bottom: 30vh;
+  margin-bottom: 20vh;
   .projects_info {
     width: 80%;
 
@@ -46,7 +46,7 @@
     max-width: 350px;
     max-height: 250px;
     border: 1px solid $color-less-white;
-
+    margin-bottom: 15vh;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     justify-content: center;
@@ -81,8 +81,14 @@
       .project_decription {
         color: $color-white-sub;
         font-size: 0.9rem;
-
+        max-height: 8rem;
         // calc(12vh + 10%);
+      }
+
+      .demo_acc_title {
+        align-self: center;
+        color: $color-white;
+        font-size: 0.5rem;
       }
 
       .tech_list {
@@ -90,6 +96,15 @@
         color: $color-white;
         font-family: 'Roboto Mono', monospace;
         font-size: 0.8rem;
+      }
+
+      .demo_accnts {
+        align-self: center;
+        @extend %reset-padding-margin;
+        color: $color-white;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.6rem;
+        margin-bottom: 0.2rem;
       }
 
       .project_links_list {
@@ -126,8 +141,8 @@
       // opacity: 0;
     }
     &:hover {
-      height: 600px;
-      max-height: 600px;
+      height: 650px;
+      max-height: 650px;
       .project_content {
         // visibility: visible;
         transform: scale(1);
@@ -175,7 +190,6 @@
   }
 
   @media (min-width: 60rem) {
-    margin-bottom: 10vh;
     .project_card {
       max-width: 700px;
       width: 700px;
@@ -203,8 +217,8 @@
         .project_content {
           width: 50%;
 
-          .tech_list {
-            margin-bottom: 4rem;
+          .project_links_list {
+            margin-top: 2rem;
           }
         }
       }

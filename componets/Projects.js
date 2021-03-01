@@ -8,7 +8,7 @@ export default function Projects({ done }) {
       <div id="projects" className={styles.projects_cotainer}>
         <div className={styles.projects_info}>
           <div className={'heading_container'}>
-            <h1 className={'heading_title'}>My works</h1>
+            <h1 className={'heading_title'}>Some of my Works</h1>
             <div className={'heading_vertical_line'}></div>
           </div>
           <div className={styles.project_list_cont}>
@@ -30,6 +30,14 @@ export default function Projects({ done }) {
                         <p className={styles.tech_list}>
                           {project.projectTech}
                         </p>
+                        <p className={styles.demo_acc_title}>{'Demo Acc:'}</p>
+                        {project.demoAcc.map((ac, i) => {
+                          return (
+                            <p className={styles.demo_accnts} key={i}>
+                              {ac}
+                            </p>
+                          )
+                        })}
                         <ul className={styles.project_links_list}>
                           <li className={styles.project_link}>
                             <a href={project.githubSource} target="_blank">

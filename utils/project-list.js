@@ -9,6 +9,10 @@ export const projectList = [
     githubSource: 'https://github.com/codenicer/demo-fs-public',
     demoLink: 'https://code-nicer-fs-demo.herokuapp.com/',
     photo: '/fs-img2.png',
+    demoAcc: [
+      'admin: admin@email.com/test123',
+      'customer: customer@email.com/test123',
+    ],
   },
   {
     projectType: 'Ecommerce Website',
@@ -20,17 +24,22 @@ export const projectList = [
     githubSource: 'https://github.com/codenicer/demo-mm-public',
     demoLink: 'https://code-nicer-mm-demo.herokuapp.com/',
     photo: '/mm-img.png',
+    demoAcc: [
+      'admin: admin@email.com/test123',
+      'customer: customer@email.com/test123',
+    ],
   },
   {
     projectType: 'Full System Management',
     projectName: 'End to End System',
     porjectDesc:
-      'An end to end company system for mananging orders from customers and aligning data collected for internal process. The porpuse of the system is to automate some data processing that will affect time line process. Its also used to monitor full business statistics in real-time',
+      'An end to end system for mananging client data and aligning data collected for internal process. The porpuse of the system is to automate data processing that will slow the process. Its also used to monitor full business statistics in real-time',
     projectTech: 'Javascript React Node JS Express Mysql',
     officialLink: null,
     githubSource: 'https://github.com/codenicer/demo-mm-public',
     demoLink: 'https://code-nicer-e2-demo.herokuapp.com',
     photo: '/e2-img.png',
+    demoAcc: ['admin: admin@email.com/test123'],
   },
 ]
 
