@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  margin-bottom: 40vh;
+  margin: 10vh 0;
   .about_card_content {
     width: 80%;
     display: flex;
@@ -80,6 +80,7 @@
     }
 
     @media (min-width: 48rem) {
+      margin-bottom: 0;
       .tech_list {
         height: 16rem;
       }

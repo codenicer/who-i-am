@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   height: auto;
+
   // min-height: 70rem;
   // height: 100vh;
   // height: 150vw;
@@ -64,12 +65,11 @@
     width: 10rem;
   }
 
-  // @media (min-width: 50rem) {
-  //   & {
-  //     // padding: 0 5rem;
-  //     margin-left: 7rem;
-  //   }
-  // }
+  @media (min-width: 50rem) {
+    & {
+      height: 100vh;
+    }
+  }
 
   // @media (min-width: 72.44rem) {
   //   width: 80%;

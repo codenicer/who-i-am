@@ -6,7 +6,7 @@
   @extend %reset-position;
   position: fixed;
   z-index: 20;
-  height: 4rem;
+  height: 5rem;
   width: 100vw;
 
   .mobile_nav_checkbox {
@@ -49,6 +49,7 @@
     width: 3.8rem;
     height: 3.8rem;
     padding: 1rem;
+    padding-top: 2.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +149,7 @@
     width: 100vw;
     justify-content: flex-end;
     padding-right: 1rem;
-    padding-top: 1rem;
+    padding-top: 1.7rem;
 
     .mobilenav_btn_resume {
       height: 1.5rem;

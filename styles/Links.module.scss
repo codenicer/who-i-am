@@ -3,16 +3,18 @@
 .links_container {
   z-index: 2;
   height: 20rem;
-  background-color: $color-darkest;
+  display: none;
   visibility: hidden;
   right: 0;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   bottom: 0;
   position: fixed;
   width: 3rem;
+  left: 2rem;
+
   // border: 1px solid red;
   @extend %reset-padding-margin;
 
@@ -30,20 +32,12 @@
     height: 6rem;
   }
 
-  @media (min-width: 50rem) {
-    & {
-      left: 1rem;
-    }
-  }
-
-  @media (min-width: 70rem) {
-    & {
-      left: 2rem;
-    }
+  @media (min-width: 48rem) {
+    display: flex;
   }
 }
 
 .github_link svg {
   @extend %reset-padding-margin;
-  height: 1.1rem;
+  height: 1.3rem;
 }

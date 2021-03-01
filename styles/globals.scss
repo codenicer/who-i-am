@@ -188,11 +188,13 @@ button {
   animation: ani-viewport ease 0.5s forwards;
   @keyframes ani-viewport {
     0% {
+      transform: translateY(50%);
       opacity: 0;
     }
     100% {
       visibility: visible;
       opacity: 1;
+      transform: translateY(0);
     }
   }
 }
@@ -233,11 +235,11 @@ button {
 
 .ani-links {
   animation: ani-links ease 1s forwards;
-  animation-delay: 1.3s;
+  animation-delay: 1s;
   @keyframes ani-links {
     0% {
-      visibility: visible;
-      transform: translateX(100%);
+      visibility: hidden;
+      transform: translateX(-100%);
       opacity: 0;
     }
     100% {

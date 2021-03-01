@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   min-height: 762px;
-  margin-bottom: 30vh;
+  // margin-bottom: 30vh;
   .projects_info {
     width: 80%;
 
@@ -70,6 +70,7 @@
         color: $color-less-white;
         font-family: 'Roboto Mono', monospace;
         font-size: clamp(14px, 2vw, 14px);
+        margin-bottom: 0.5rem;
       }
       .project_title {
         @extend %reset-padding-margin;
@@ -174,6 +175,7 @@
   }
 
   @media (min-width: 60rem) {
+    margin-bottom: 10vh;
     .project_card {
       max-width: 700px;
       width: 700px;
@@ -181,23 +183,29 @@
       max-height: 410px;
 
       img {
-        left: 23%;
-        height: 410px;
-        max-height: 380px;
-        max-width: 310px;
+        left: 24.3%;
+        height: 450px;
+        max-height: 450px;
+        max-width: 350px;
       }
 
       &:hover {
-        height: 350px;
-        max-height: 350px;
+        max-width: 700px;
+        width: 700px;
+        height: 410px;
+        max-height: 410px;
         img {
           left: 50%;
-          height: 450px;
-          max-height: 450px;
-          max-width: 340px;
+          height: 500px;
+          max-height: 500px;
+          max-width: 390px;
         }
         .project_content {
           width: 50%;
+
+          .tech_list {
+            margin-bottom: 4rem;
+          }
         }
       }
     }

@@ -1,8 +1,28 @@
+import { useEffect, useState } from 'react'
 import styles from '../styles/Links.module.scss'
 
-export default function Links() {
+export default function Links({ done }) {
+  const [visible, setVisible] = useState(false)
+  const [viewWidth, setViewWidth] = useState(window.innerWidth)
+
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setViewWidth(window.i.nnerWidth)
+  //     if (done && viewWidth > 768) {
+  //       setVisible(true)
+  //     } else {
+  //       setVisible(false)
+  //     }
+  //   }
+
+  //   window.addEventListener('resize', handleResize)
+  //   return () => window.removeEventListener('resize', handleResize)
+  // }, [viewWidth])
+
+  // console.log(viewWidth)
+  // ${visible ? 'ani-links' : ''}
   return (
-    <div className={`${styles.links_container} ${false ? 'ani-links' : ''}`}>
+    <div className={`${styles.links_container} ani-links `}>
       <ul className={styles.links_list}>
         <li className={styles.github_link}>
           <svg viewBox="0 0 256 250">

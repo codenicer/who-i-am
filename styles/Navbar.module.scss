@@ -5,7 +5,7 @@
   display: none;
   position: fixed;
   z-index: 20;
-  height: 4rem;
+  height: 6rem;
   width: 100vw;
   background-color: $color-darkest;
   align-items: center;
@@ -20,18 +20,20 @@
     }
   }
 
-  .logo_container {
-    grid-area: 1 / 1 / span 1 / span 2;
-  }
-
-  .nav_link_container {
-    grid-area: 2 / 1 / span 1 / span 3;
+  .nav_flex {
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    align-items: center;
   }
 
   .nav_btn_resume {
-    justify-self: flex-end;
-    margin-right: 2rem;
-    grid-area: 1 / 3 / span 1 / span 1;
+    margin-left: 2rem;
+  }
+
+  .nav_link_list li {
+    margin: 0 0.8rem;
   }
 
   @media (min-width: 48rem) {
@@ -51,7 +53,8 @@
 
   @media (min-width: 55rem) {
     & {
-      grid-template-columns: 2fr 2fr 1fr;
+      // display: flex;
+      justify-content: space-between;
     }
   }
 }
