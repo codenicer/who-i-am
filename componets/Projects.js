@@ -119,6 +119,11 @@ export default function Projects({ done }) {
                 )
               })}
             </ul>
+            {projectList.length > generalSetting.maxProjectRender ? (
+              <button className style={styles.projects_show_more}></button>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>
