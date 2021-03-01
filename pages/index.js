@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import Main from './main'
+import Main from '../componets/Main'
 import Footer from '../componets/Footer'
-import Loader from './loader'
+import Loader from '../componets/Loader'
 import { doneLoadingState } from '../provider/DoneLoadingContext'
 
 export default function Home() {
