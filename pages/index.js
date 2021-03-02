@@ -14,6 +14,14 @@ export default function Home() {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>A full stach web-developer - Code Nicer</title>
+        <meta
+          name="description"
+          content="Code nicer, a full stack web developer, You have an idea? , Let build your idea right now, My inbox is alway open."
+        />
+        {/* <meta name="keywords" content="@yield('meta_keywords', $seosetting->keyword)"> */}
+        {/* <meta name="author" content="{{ $seosetting->author }}"> */}
+        {/* <meta name="sitemap_link" content="{{ $seosetting->sitemap_link }}"></meta> */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
