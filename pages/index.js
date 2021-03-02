@@ -7,10 +7,8 @@ import { doneLoadingState } from '../provider/DoneLoadingContext'
 
 export default function Home() {
   const doneState = doneLoadingState()
-  return !doneState ? (
-    <Loader />
-  ) : (
-    <div className={styles.container}>
+  return (
+    <>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,8 +42,14 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Main />
-      <Footer />
-    </div>
+      {!doneState ? (
+        <Loader />
+      ) : (
+        <div className={styles.container}>
+          <Main />
+          <Footer />
+        </div>
+      )}
+    </>
   )
 }
