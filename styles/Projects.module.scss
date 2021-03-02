@@ -181,6 +181,33 @@
     }
   }
 
+  @media (max-width: 20rem) {
+    .project_card:hover {
+      height: 680px;
+      max-height: 680px;
+
+      .project_decription {
+        color: $color-white-sub;
+        font-size: 0.9rem;
+        max-height: 15rem;
+      }
+    }
+  }
+
+  @media (min-width: 30rem) {
+    .project_card:hover {
+      height: 700px;
+      max-height: 700px;
+    }
+  }
+
+  @media (min-width: 30rem) {
+    .project_card:hover {
+      height: 700px;
+      max-height: 700px;
+    }
+  }
+
   @media (min-width: 48rem) {
     .project_card {
       width: 600px;
@@ -208,13 +235,6 @@
           width: 50%;
         }
       }
-    }
-  }
-
-  @media (min-width: 30rem) {
-    .project_card:hover {
-      height: 700px;
-      max-height: 700px;
     }
   }
 
