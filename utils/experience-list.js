@@ -5,7 +5,7 @@ export const experiences = [
     dateFrom: 'Dec 2018',
     dateTo: 'July 2020',
     actions: [
-      'Worked with a team of four web developer to build a end to end system for the company, and two ecommerce website at the same time while maintaining the quality of the application for the customer .',
+      'Worked with a team of four web developer to build an end to end system for the company, and two ecommerce website at the same time while maintaining the quality of the application for the customer .',
       'Collaborate on maintaining and organizing database for future proof data storing.',
       'Helped on renovating for automation little by little, a big step up for the company.',
     ],
