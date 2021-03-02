@@ -1,6 +1,6 @@
 export const projectList = [
   {
-    projectType: 'Ecommerce Website',
+    projectType: 'Company Project(E-Commerce)',
     projectName: 'Flowerstore PH',
     porjectDesc:
       'A Ecommerce website that focus on selling flowers and give happiness for the clients. The main goal of the application was to control and organized orders from clients that will direct to main System, also to provide fast and better service.',
@@ -15,7 +15,7 @@ export const projectList = [
     ],
   },
   {
-    projectType: 'Ecommerce Website',
+    projectType: 'Company Project(E-Commerce)',
     projectName: 'Minimart PH',
     porjectDesc:
       'This project is an Ecommerce website that was build upon pandemic starts just to help customer, its goals is  to enable customers to get their daily essentials delivered to their doorstep. ',
@@ -30,7 +30,7 @@ export const projectList = [
     ],
   },
   {
-    projectType: 'Full System Management',
+    projectType: 'Company Project(Business Management System)',
     projectName: 'End to End System',
     porjectDesc:
       'An end to end system for mananging client data and aligning data collected for internal process. The porpuse of the system is to automate data processing that will slow the process. Its also used to monitor full business statistics in real-time',
@@ -41,8 +41,29 @@ export const projectList = [
     photo: '/e2-img.png',
     demoAcc: ['admin: admin@email.com/test123'],
   },
-]
+  {
+    projectType: 'Mini Project(Micro-services)',
+    projectName: 'Microservices App',
+    porjectDesc:
+      'A ticketing app that run on microservices structure, A full application divided into 6 services, each service with its own database.',
+    projectTech: 'Typescript Docker Nginx Mongodb  Nodejs Express',
+    officialLink: null,
+    githubSource: 'https://github.com/codenicer/microservices-ticketing-app',
+    demoLink: null,
+    photo: '/micro-img.png',
+    demoAcc: [''],
+  },
 
-//https://code-nicer-mm-demo.herokuapp.com/
-//https://github.com/codenicer/demo-mm-public
-//https://github.com/codenicer/demo-system-public
+  {
+    projectType: 'Mini Project(A.I.)',
+    projectName: 'Facedection App',
+    porjectDesc:
+      'Small projects that can detect faces from image. Simple and fun.',
+    projectTech: 'Javascript NodeJS Express Mysql',
+    officialLink: 'http://code-nicer.info/smart-brain/',
+    githubSource: 'https://github.com/codenicer/smart-brain',
+    demoLink: null,
+    photo: '/brain-img.png',
+    demoAcc: [''],
+  },
+]
