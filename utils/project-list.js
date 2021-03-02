@@ -45,7 +45,7 @@ export const projectList = [
     projectType: 'Mini Project(Micro-services)',
     projectName: 'Microservices App',
     porjectDesc:
-      'A ticketing app that run on microservices structure, A full application divided into 6 services, each service with its own database.',
+      'A ticketing app build for school project, structured with  microservices architecture, A full application divided into 6 services, each service with its own database. Payments handled by stripe.',
     projectTech: 'Typescript Docker Nginx Mongodb  Nodejs Express',
     officialLink: null,
     githubSource: 'https://github.com/codenicer/microservices-ticketing-app',
@@ -58,7 +58,7 @@ export const projectList = [
     projectType: 'Mini Project(A.I.)',
     projectName: 'Facedection App',
     porjectDesc:
-      'Small projects that can detect faces from image. Simple and fun.',
+      'Small personal projects that can detect faces from image. Simple and fun.',
     projectTech: 'Javascript NodeJS Express Mysql',
     officialLink: 'http://code-nicer.info/smart-brain/',
     githubSource: 'https://github.com/codenicer/smart-brain',
