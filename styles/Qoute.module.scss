@@ -13,22 +13,25 @@
   // border: 1px solid red;
   @extend %reset-padding-margin;
 
-  height: 70vh;
+  height: 80vh;
   p {
     color: #f8dbbe8e;
     writing-mode: vertical-rl;
     font-family: 'Roboto Mono', monospace;
-    font-size: 0.8rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   .qoute_horizontal_line {
     border-left: 1px solid #f8dbbe8e;
-    height: 7rem;
+    height: 6rem;
   }
 
   @media (min-width: 48rem) {
     right: 2rem;
+    p {
+      font-size: 0.9rem;
+    }
   }
 }
