@@ -101,7 +101,10 @@ export default function MobileNav({ done }) {
         </div>
       </div>
       <div className={styles.logo_container}>
-        <button className={styles.mobilenav_btn_resume}>Resume</button>
+        <a href="/resume.pdf" target="_blank">
+          <button className={styles.mobilenav_btn_resume}>Resume</button>
+        </a>
+
         <a href="#">
           <svg
             viewBox="22.875 162.594 395.203 100.813"

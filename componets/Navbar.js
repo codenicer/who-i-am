@@ -102,7 +102,9 @@ export default function Navbar({ done }) {
             </li>
           </ul>
         </div>
-        <button className={styles.nav_btn_resume}>Resume</button>
+        <a href="/resume.pdf" target="_blank">
+          <button className={styles.nav_btn_resume}>Resume</button>
+        </a>
       </div>
     </nav>
   )
