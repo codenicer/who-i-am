@@ -11,10 +11,7 @@ export default function MainPageCard({ done }) {
           Im just a guy who codes.
         </h2>
         <p className={styles.main_card__subject}>
-          I am a full stack web developer based on Philippines. Building a web
-          application is my specialties, from setting-up till deployment.
-          Additionaly implementing continues integration and development for the
-          application is must.
+          {generalSetting.maingPageMessage}
         </p>
         <a href={generalSetting.emailTo}>
           <button className={styles.main_card__btn}> Get In Touch </button>
