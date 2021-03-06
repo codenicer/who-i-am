@@ -101,7 +101,7 @@ export default function MobileNav({ done }) {
         </div>
       </div>
       <div className={styles.logo_container}>
-        <a href="/resume.pdf" target="_blank">
+        <a href="/Tenido-Ruther-V.-Resume.pdf" target="_blank">
           <button className={styles.mobilenav_btn_resume}>Resume</button>
         </a>
 
