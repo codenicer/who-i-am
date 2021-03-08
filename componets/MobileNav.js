@@ -56,7 +56,6 @@ export default function MobileNav({ done }) {
       }
 
       if (scrollUp.onTop) {
-        console.log('QWEQW')
         setClasses([`${styles.mobile_nav}`, 'ani-nav'])
       }
     }
