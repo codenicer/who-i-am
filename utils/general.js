@@ -7,5 +7,5 @@ export const generalSetting = {
   maxProjectRender: 3,
   quoute: '“Everything is difficult until you know how to do it.”',
   maingPageMessage:
-    'I am a full stack web developer based in the Philippines. Building a web application is what is I do, from setting-up up until the deployment. Furthermore, implementing continues, integration and development for the application is a must.',
+    'I am a Full Stack Web Developer based in the Philippines. Building a web application is what I do. From constructing through deployment .Furthermore, implementing continues integration and development for the application is a must.',
 }
