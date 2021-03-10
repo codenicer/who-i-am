@@ -15,7 +15,7 @@ export default function Home() {
         <title>Web Devloper | Code Nicer</title>
         <meta
           name="description"
-          content="Code nicer, a full stack web developer, You have an idea? , Let build your idea right now, My inbox is alway open."
+          content="Code nicer, a full stack web developer. Do you have an idea? Let's build your idea now, my inbox is always open."
         />
         {/* <meta name="keywords" content="@yield('meta_keywords', $seosetting->keyword)"> */}
         {/* <meta name="author" content="{{ $seosetting->author }}"> */}
