@@ -73,7 +73,6 @@ export default function Experiences() {
               </p>
               <ul className={styles.timeline_work_list}>
                 {selectedExp.actions.map((ac, i) => {
-                  console.log({ ac })
                   return <li key={i}>{ac}</li>
                 })}
               </ul>
