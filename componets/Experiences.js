@@ -36,7 +36,7 @@ export default function Experiences() {
                   index === 0 ? 'btn-active' : ''
                 }`}
               >
-                2018
+                11/2018
               </button>
               <button
                 onClick={() => onClickHandler(1)}
@@ -44,7 +44,23 @@ export default function Experiences() {
                   index === 1 ? 'btn-active' : ''
                 }`}
               >
-                2021
+                08/2020
+              </button>
+              <button
+                onClick={() => onClickHandler(2)}
+                className={`${styles.timeline_btn} ${
+                  index === 2 ? 'btn-active' : ''
+                }`}
+              >
+                03/2021
+              </button>
+              <button
+                onClick={() => onClickHandler(3)}
+                className={`${styles.timeline_btn} ${
+                  index === 3 ? 'btn-active' : ''
+                }`}
+              >
+                10/2021
               </button>
             </div>
             <div className={classes.join(' ')}>
@@ -57,6 +73,7 @@ export default function Experiences() {
               </p>
               <ul className={styles.timeline_work_list}>
                 {selectedExp.actions.map((ac, i) => {
+                  console.log({ ac })
                   return <li key={i}>{ac}</li>
                 })}
               </ul>
