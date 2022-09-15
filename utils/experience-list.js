@@ -40,7 +40,7 @@ export const experiences = [
     dateFrom: 'Oct 2021',
     dateTo: 'Present',
     actions: [
-      'Worked as Professional Full stack web-developer',
+      'Worked as professional full stack web-developer',
       'The goal is to work as a team leader of a small team',
       'Maintaning and providing a high quility product while managing a small team',
     ],
