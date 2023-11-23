@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <meta charSet='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <title>Web Devloper | Code Nicer</title>
+        <title>Code Nicer | Web Developer</title>
         <meta
           name='description'
           content="Code nicer, a full stack web developer. Do you have an idea? Let's build your idea now, my inbox is always open."
