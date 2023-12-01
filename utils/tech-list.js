@@ -5,6 +5,7 @@ export const techList = [
   'Express',
   'Docker',
   'NGINX',
+  'Kubernetes',
   'Next js',
   'REACT ',
   'Jest js',
@@ -14,5 +15,5 @@ export const techList = [
   'MongoDB',
   'SQL(Postgresql, Mysql)',
   'Puppeteer , NightmareJS',
-  'HTML & (S)CSS',
+  'HTML & (S)CSS'
 ]
