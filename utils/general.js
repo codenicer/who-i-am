@@ -7,5 +7,5 @@ export const generalSetting = {
   maxProjectRender: 3,
   quoute: '“Everything is difficult until you know how to do it.”',
   maingPageMessage:
-    'I am a dedicated Full Stack Web Developer located in the Philippines, specializing in the end-to-end development of dynamic web applications. My expertise encompasses the entire development lifecycle, from initial concept and design to seamless deployment. I prioritize the implementation of continuous integration and development practices to ensure the ongoing enhancement and refinement of applications, delivering optimal user experiences. Passionate about leveraging innovative technologies to create robust and scalable web solutions, I am committed to crafting high-quality, performance-driven applications that meet the evolving needs of clients and users.',
+    'I\'m a devoted Full Stack Web Developer based in the Philippines, with a focus on creating dynamic web applications from concept to deployment. I excel in implementing continuous integration and development practices to enhance applications and deliver top-notch user experiences. My passion lies in leveraging innovative technologies to build robust and scalable web solutions, ensuring high-quality, performance-driven applications that meet clients\' evolving needs.',
 }
