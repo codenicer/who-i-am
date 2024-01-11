@@ -44,7 +44,7 @@ export default function About({ inViewport }) {
 
             <div className={`${styles.img_cont} ${styles.image_cont_center}`}>
               <div className={styles.image_box}>
-                <img src="/me.jpg" />
+                <img src="/me.jpeg" />
               </div>
             </div>
           </div>
