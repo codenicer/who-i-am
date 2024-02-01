@@ -7,5 +7,5 @@ export const generalSetting = {
   maxProjectRender: 3,
   quoute: '“Everything is difficult until you know how to do it.”',
   maingPageMessage:
-    'I\'m a devoted Full Stack Web Developer based in the Philippines, with a focus on creating dynamic web applications from concept to deployment. I excel in implementing continuous integration and development practices to enhance applications and deliver top-notch user experiences. My passion lies in leveraging innovative technologies to build robust and scalable web solutions, ensuring high-quality, performance-driven applications that meet clients\' evolving needs.',
+    'I\'m a Full Stack Web Developer in the Philippines, adept at creating dynamic web applications from concept to deployment. Skilled in continuous integration and development practices for superior user experiences. Passionate about leveraging innovative technologies to build robust, scalable web solutions meeting client needs.',
 }
