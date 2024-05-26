@@ -6,6 +6,5 @@ export const generalSetting = {
   twitter: '#',
   maxProjectRender: 3,
   quoute: '“Everything is difficult until you know how to do it.”',
-  maingPageMessage:
-    'I\'m a Full Stack Web Developer in the Philippines, adept at creating dynamic web applications from concept to deployment. Skilled in continuous integration and development practices for superior user experiences. Passionate about leveraging innovative technologies to build robust, scalable web solutions meeting client needs.',
+  maingPageMessage: 'I\'m a Full Stack Web Developer from the Philippines, skilled in creating dynamic web applications from concept to deployment. I excel in continuous integration and development for superior user experiences and am passionate about using innovative technologies to build robust, scalable solutions for clients.'
 }
